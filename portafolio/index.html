@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Espectacular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: rgb(5, 6, 69);
+            --color-secondary: #E94823;
+            --color-accent: #FAE7A5;
+            --color-light: #65595a;
+            --color-dark: #1D1D1D;
+        }
+        body {
+            background-color: var(--color-light);
+            color: var(--color-dark);
+        }
+        .navbar, footer {
+            background-color: var(--color-primary) !important;
+        }
+        h2 {
+            color: var(--color-secondary);
+        }
+        .btn-primary {
+            background-color: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+        .btn-primary:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .overlay {
+            background: linear-gradient(45deg, rgba(38,40,221,0.7), rgba(233,72,35,0.7));
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-caption {
+            background-color: rgba(29,29,29,0.7);
+            padding: 20px;
+        }
+        .carousel-caption h5,
+        .carousel-caption p {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease-in-out;
+        }
+        .section-title:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="parallax" style="background-image: url('https://source.unsplash.com/random/1920x1080?technology');">
+        <div class="overlay">
+            <div class="container text-center text-white">
+                <h1 class="display-1" data-aos="fade-up">Bienvenido a Mi Portafolio</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Desarrollador Web Creativo e Innovador</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre-mi" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up">Sobre Mí</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="https://source.unsplash.com/random/600x400?portrait" alt="Mi foto" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <p>Soy un desarrollador web apasionado por crear experiencias digitales únicas y atractivas. Con experiencia en HTML, CSS, JavaScript y frameworks modernos, me esfuerzo por combinar diseño innovador y funcionalidad en cada proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up">Mis Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/random/800x600?website" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Descripción breve del proyecto 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/random/800x600?app" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">Descripción breve del proyecto 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/random/800x600?design" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">Descripción breve del proyecto 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up">Galería de Imágenes</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <!-- Repite este botón hasta llegar a 20 -->
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://source.unsplash.com/random/1600x900?tech" class="d-block w-100" alt="Imagen 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Tecnología Innovadora</h5>
+                            <p>Explorando las últimas tendencias en desarrollo web.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/random/1600x900?code" class="d-block w-100" alt="Imagen 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Código Limpio</h5>
+                            <p>Creando soluciones eficientes y mantenibles.</p>
+                        </div>
+                    </div>
+                    <!-- Repite este bloque hasta tener 20 imágenes -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up">Contacto</h2>
+            <form data-aos="fade-up">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="5" placeholder="Mensaje"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2025 Mi Portafolio Espectacular. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
